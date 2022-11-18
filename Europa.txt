@@ -1,0 +1,11 @@
+Polska;Warszawa
+Niemcy;Berlin
+Wegry;Budapeszt
+Finlandia;Oslo
+Anglia;Londyn
+Austria;Wieden
+Czechy;Praga
+Slowacja;Bratyslawa
+Czarnogora;Podgorica
+Chorwacja;Zagrzeb
+Bulgaria;Sofia

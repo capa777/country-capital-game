@@ -1,0 +1,10 @@
+Afganistan;Kabul
+Iran;Teheran
+Katar;Ad-Dauha
+Wietnam;Hanoi
+Birma;Rangun
+Irak;Bagdad
+Laos;Wientian
+Liban;Bejrut
+Malediwy;Male
+Syria;Damaszek

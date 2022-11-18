@@ -1,0 +1,10 @@
+Angola;Luanda
+Burundi;Gitega
+Egipt;Kair
+Ghana;Akra
+Algieria;Algier
+Kamerun;Jaunde
+Liberia;Monrovia
+Mali;Bamako
+Mozambik;Maputo
+Namibia;Windhuk
