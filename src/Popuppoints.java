@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class Popuppoints extends JFrame implements ActionListener {
-    boolean wid=false;
+    boolean isVisible =false;
     JMenu jmenu;
 
     public final JMenu menu1 = new JMenu("Wyjdz");
@@ -16,7 +16,7 @@ public class Popuppoints extends JFrame implements ActionListener {
             this.jmenu = jmenu;
             menu1.add( new JMenuItem("Wyjdz"));
             menu1.getItem(0).addActionListener(this);
-            setVisible(wid);
+            setVisible(isVisible);
             menuBar.add(menu1);
             setJMenuBar(menuBar);
 
@@ -31,8 +31,8 @@ public class Popuppoints extends JFrame implements ActionListener {
         gDC.clearRect(20, 20, getSize().width, getSize().height);
         gDC.drawString (App.contentpopuppoints, 50, getHeight()/2);
     }
-    void Refresh(){
-        setVisible(wid);
+    void refresh(){
+        setVisible(isVisible);
         repaint();
     }
 
@@ -40,7 +40,7 @@ public class Popuppoints extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
             if(e.getActionCommand().equals("Wyjdz")) {
                 jmenu.getItem(3).setBackground(jmenu.getItem(0).getBackground());
-                wid = false;
+                isVisible = false;
                 dispose();
             }
     }
@@ -52,7 +52,7 @@ public class Popuppoints extends JFrame implements ActionListener {
         if (e.getID() == WindowEvent.WINDOW_CLOSING) {
             jmenu.getItem(3).setBackground(jmenu.getItem(0).getBackground());
             dispose();
-            wid = false;
+            isVisible = false;
         }
     }
 }

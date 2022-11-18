@@ -15,12 +15,12 @@ public class FileReader {
     }
 
     public List<String> getListOfAnswers(){
-        List<String> lista = new ArrayList<>();
-        lista.clear();
+        List<String> list = new ArrayList<>();
+        list.clear();
         while (scanner.hasNextLine()) {
-            lista.add(scanner.nextLine());
+            list.add(scanner.nextLine());
         }
-        return lista;
+        return list;
     }
 
 }

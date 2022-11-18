@@ -12,7 +12,7 @@ public class App extends JFrame implements ActionListener {
     public static String path="Europa.txt";
     public FileToObjectCompiler fileToObjectCompiler;
     ArrayList<String> answears = new ArrayList<>();
-    int punkty=0;
+    int points =0;
     Popup helppopup = new Popup();
 
     public String contentinsidewindow = "";
@@ -166,7 +166,7 @@ public class App extends JFrame implements ActionListener {
             getMenu1().getItem(1).setEnabled(false);
             insidetext = false;
             contentinsidewindow = "";
-            pointspopup.wid=false;
+            pointspopup.isVisible =false;
             repaint();
             pointspopup.dispose();
             consoletext = false;
@@ -178,11 +178,11 @@ public class App extends JFrame implements ActionListener {
         }
         else if(e.getActionCommand().equals("samouczek")){
             contentpopup = "gra polega na zaznaczaniu poprawnych par kraj - stolica";
-            helppopup.wid=true;
-            helppopup.odswiez();
+            helppopup.isVisible =true;
+            helppopup.refresh();
         }
         else if(e.getActionCommand().equals("okno wewnetrzne")){
-            contentinsidewindow = "aktualna liczba punktow to: " +punkty;
+            contentinsidewindow = "aktualna liczba punktow to: " + points;
             repaint();
             getMenu1().getItem(2).setBackground(Color.GREEN);
             insidetext= !insidetext;
@@ -193,11 +193,11 @@ public class App extends JFrame implements ActionListener {
             }
         }
         else if(e.getActionCommand().equals("okno zewnetrzne")){
-            pointspopup.wid=!pointspopup.wid;
-            contentpopuppoints = "aktualna liczba punktow to:" +punkty;
-            pointspopup.Refresh();
+            pointspopup.isVisible =!pointspopup.isVisible;
+            contentpopuppoints = "aktualna liczba punktow to:" + points;
+            pointspopup.refresh();
             getMenu1().getItem(3).setBackground(Color.GREEN);
-            if(!pointspopup.wid) getMenu1().getItem(3).setBackground(getMenu4().getBackground());
+            if(!pointspopup.isVisible) getMenu1().getItem(3).setBackground(getMenu4().getBackground());
         }
         else if (e.getActionCommand().equals("wyjdz")) {
             System.out.println("Meg used="+(Runtime.getRuntime().totalMemory()-
@@ -216,7 +216,7 @@ public class App extends JFrame implements ActionListener {
                 //System.out.print("\033\143");
                 for (int i = 0; i < 20; ++i) System.out.println();
             }
-            if(consoletext) System.out.println("aktualna liczba punktow to:" +punkty);
+            if(consoletext) System.out.println("aktualna liczba punktow to:" + points);
         }
         else {
             fileToObjectCompiler = new FileToObjectCompiler(path);
@@ -243,28 +243,28 @@ public class App extends JFrame implements ActionListener {
                 for (Country go : countries) {
                     if (go.getCapital().equals(answears.get(0)) || go.getCapital().equals(answears.get(1))) {
                         if (go.getCountry().equals(answears.get(0)) || go.getCountry().equals(answears.get(1))) {
-                            punkty++;
-                            contentinsidewindow = "aktualna liczba punktow to: " + punkty;
-                            contentpopuppoints = "aktualna liczba punktow to:" +punkty;
-                            pointspopup.Refresh();
+                            points++;
+                            contentinsidewindow = "aktualna liczba punktow to: " + points;
+                            contentpopuppoints = "aktualna liczba punktow to:" + points;
+                            pointspopup.refresh();
                             if(insidetext) {
                                 repaint();
                             }
                             break;
                         }else{
-                            punkty = 0;
+                            points = 0;
                             contentinsidewindow = "aktualna liczba punktow to: 0";
                             if(insidetext) {
                                 repaint();
                             }
-                            contentpopuppoints = "aktualna liczba punktow to:" +punkty;
-                            pointspopup.Refresh();
+                            contentpopuppoints = "aktualna liczba punktow to:" + points;
+                            pointspopup.refresh();
                         }
                     }
                 }
                 getMenu3().setEnabled(true);
                 getMenu2().setEnabled(true);
-                if(consoletext) System.out.println("aktualna liczba punktow to: " +punkty);
+                if(consoletext) System.out.println("aktualna liczba punktow to: " + points);
             }
         }
     }
