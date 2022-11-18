@@ -1,3 +1,7 @@
+package com.capa;
+
+import com.capa.App;
+
 import javax.swing.*;
 
 public class Main {

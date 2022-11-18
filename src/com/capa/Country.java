@@ -1,3 +1,5 @@
+package com.capa;
+
 public class Country {
 
     public Country(String country, String capital) {

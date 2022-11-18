@@ -1,3 +1,8 @@
+package com.capa;
+
+import com.capa.Country;
+import com.capa.FileReader;
+
 import java.util.ArrayList;
 
 public class FileToObjectCompiler {

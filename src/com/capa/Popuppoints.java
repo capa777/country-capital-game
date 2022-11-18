@@ -1,3 +1,7 @@
+package com.capa;
+
+import com.capa.App;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
